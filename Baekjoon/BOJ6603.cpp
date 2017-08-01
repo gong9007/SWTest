@@ -1,10 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
+#include <stdlib.h>
 int K, S[13], L[6];
 
-void dfs(int pos, int cnt){
-	if (pos == K){
+void dfs(int pos, int cnt)
+{
+	if (pos == K)
+	{
 		for (int i = 0; i < 6; i++)
 		{
 			printf("%d ", L[i]);
@@ -23,8 +25,10 @@ void dfs(int pos, int cnt){
 	if (K - pos > 6 - cnt) dfs(pos + 1, cnt);
 }
 
-int main(){
-	while (1){
+int main()
+{
+	while (1)
+	{
 		scanf("%d", &K);
 		if (K == 0) break;
 		for (int i = 0; i < K; i++)
@@ -34,4 +38,5 @@ int main(){
 		dfs(0, 0);
 		printf("\n");
 	}
+	//system("pause");
 }
